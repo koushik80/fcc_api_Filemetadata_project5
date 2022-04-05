@@ -23,9 +23,7 @@ app.get('/', function (req, res) {
     res.sendFile(process.cwd() + '/views/index.html');
 });
 
-
-
-
+//upload file 
 const upload = multer();
 app.post("/api/fileanalyse", upload.single("upfile"), (req, res) => {
   try {
